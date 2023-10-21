@@ -1,6 +1,4 @@
-
-## TO-DO / Bugs
-- [ ] BUG: Error bei entfernung von einem Schiff nachdem es gesunken ist
+[![Java CI with Gradle](https://github.com/4rr0wx/Schiffswert-Tycoon/actions/workflows/gradle.yml/badge.svg)](https://github.com/4rr0wx/Schiffswert-Tycoon/actions/workflows/gradle.yml)
 
 # Schiffswerft Strategiespiel
 
