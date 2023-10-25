@@ -12,6 +12,8 @@ import werft.Werft;
 public class Main {
     public static void main(String[] args) {
         Werft dieWerft = new Werft();
+        //TODO Benutzerfreundlicher machen
+        
         // Ablauf Monat für Monat
         try {
             while (true) {

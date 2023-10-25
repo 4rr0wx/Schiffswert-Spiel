@@ -4,6 +4,7 @@ import definitions.Definitions;
 import schiffe.Schiff;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Werft {
@@ -17,18 +18,22 @@ public class Werft {
     }
 
     public void arbeitetEinenMonat() throws KonkursException {
-        for (Schiff x: dieSchiffe) x.rostet();
-        for (Schiff x: dieSchiffe) dieKassa.nimmtEin(x.monatsGewinn());
-        for (Schiff x: dieSchiffe) {
-            if (x.getRostFaktor() <= 0.25 ){
+        Iterator<Schiff> iterator = dieSchiffe.iterator();
+
+        while (iterator.hasNext()) {
+            Schiff x = iterator.next();
+            x.rostet();
+            dieKassa.nimmtEin(x.monatsGewinn());
+
+            if (x.getRostFaktor() <= 0.25) {
                 dieKassa.zahltAus(x.PreisFuerBergen());
-                dieSchiffe.remove(x);
-                //TODO Schiffe aus der werft entfernen wenn sie sinken
-                System.out.println("Schiff " + x.getSchiffsNummer() + " ist gesunken und muss Bezahlt werden.");
+                iterator.remove(); // Entfernt das Schiff aus der Liste
+                System.out.println("Schiff " + x.getSchiffsNummer() + " ist gesunken");
             }
         }
-
     }
+
+
 
     public void zustandAusgeben() {
         for (Schiff x: dieSchiffe) x.zustandAusgeben();
@@ -63,6 +68,5 @@ public void bezahltStreichen (double PreisFuerStreichen) throws  KonkursExceptio
     public void verstrottet(Schiff x) {
         System.out.println("Schiff " + x.getSchiffsNummer() + " wurde verschrottet");
         dieSchiffe.remove(x);
-        // TODO implement verstrottet in werft.Werft
     }
 }
