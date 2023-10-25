@@ -1,46 +1,50 @@
 [![Java CI with Gradle](https://github.com/4rr0wx/Schiffswert-Tycoon/actions/workflows/gradle.yml/badge.svg)](https://github.com/4rr0wx/Schiffswert-Tycoon/actions/workflows/gradle.yml)
 
-# Schiffswerft Strategiespiel
+Shipyard Strategy Game (German Language)
 
-Dies ist ein textbasiertes Strategiespiel in Java, in dem du eine Schiffs-Werft verwaltest und versuchst, deinen Kassastand zu maximieren, indem du Schiffe baust, betreibst und instand hältst.
-## Spielbeschreibung
+This is a text-based strategy game in Java where you manage a shipyard and aim to maximize your cash balance by building, operating, and maintaining ships.
 
-Du bist der Manager eines Schiffsunternehmens mit einer eigenen Werft. In deinem Unternehmen besitzt du Schiffe, die Gewinn einfahren, solange sie intakt sind. Deine Aufgabe ist es, Schiffe zu bauen, zu betreiben und rechtzeitig zu warten, um Verluste zu vermeiden.
-## Schiffsarten und Kosten
 
-    Frachtschiffe kosten 30 Mio EUR Baukosten.
-    Tanker kosten 70 Mio EUR.
-    Passagierschiffe kosten 150 Mio EUR.
+> [!WARNING]
+> Please note: This game is in the German language.
 
-## Monatliche Einnahmen
+# Game Description
 
-    Frachtschiffe bringen 0.2 Mio EUR pro Monat.
-    Tanker bringen 0.5 Mio EUR pro Monat.
-    Passagierschiffe bringen 1 Mio EUR pro Monat.
+You are the manager of a ship company with your own shipyard. In your company, you own ships that generate profits as long as they are in good condition. Your task is to build ships, operate them, and perform maintenance to avoid losses.
+## Types of Ships and Costs
 
-## Schiffsinstandhaltung
+    Cargo ships cost 30 million EUR to build.
+    Tankers cost 70 million EUR.
+    Passenger ships cost 150 million EUR.
 
-Jedes Schiff rostet im Betrieb. Der Rostfaktor beträgt 0.92 pro Monat. Ein Schiff sinkt, wenn weniger als 25% der Schiffshaut intakt sind. Bergungskosten bei einem sinkenden Schiff sind fünfmal der Neupreis des Schiffes.
+## Monthly Income
 
-Um den Verlust zu vermeiden, kannst du:
+    Cargo ships bring in 0.2 million EUR per month.
+    Tankers bring in 0.5 million EUR per month.
+    Passenger ships bring in 1 million EUR per month.
 
-    - Das Schiff verschrotten (kostet 10% des Schiffspreises).
-    - Das Schiff neu streichen Danach ist die Schiffshaut wieder 
-      ( 100% minus ( 5% mal der Anzahl der bereits erfolgten Streichvorgänge)) intakt.
+## Ship Maintenance
 
-## Spielregeln
+Each ship rusts during operation. The rust factor is 0.92 per month. A ship sinks when less than 25% of the hull is intact. Salvage costs for a sinking ship are five times the ship's original price.
 
-Das Spiel beginnt mit 500 Mio EUR Startkapital in der Kasse der Werft. In jedem Monat bringen fahrende Schiffe Gewinn in die Kasse. Sinkt ein Schiff, werden Bergungskosten abgezogen.
+To avoid losses, you can:
 
-Jeden Monat kannst du entscheiden, ob du:
+    Scrap the ship (costs 10% of the ship's price).
+    Repaint the ship (cost varies by ship type and the number of repaints).
 
-    Ein Frachtschiff bauen möchtest.
-    Einen Tanker bauen möchtest.
-    Ein Passagierschiff bauen möchtest.
-    Ein bestimmtes Schiff neu streichen möchtest.
-    Ein Schiff verschrotten möchtest.
-    Nichts tun möchtest.
+## Game Rules
 
-Das Spiel endet, wenn der Kassastand negativ wird.
+The game begins with 500 million EUR in the shipyard's cash. Every month, operational ships generate profits for the cash. If a ship sinks, salvage costs are deducted.
 
-Dein Ziel ist es, den Kassastand so hoch wie möglich zu treiben.
+Each month, you can decide whether to:
+
+    Build a cargo ship.
+    Build a tanker.
+    Build a passenger ship.
+    Repaint a specific ship.
+    Scrap a ship.
+    Do nothing.
+
+The game ends when the cash balance becomes negative.
+
+Your goal is to maximize the cash balance.
